@@ -18,7 +18,7 @@ class API_ERROR extends ERROR {
             this.statck = statk
         }
         else{
-            ERROR.captureStackTrace(this,this.constructor)
+            error.captureStackTrace(this,this.constructor)
         }
     }
 }

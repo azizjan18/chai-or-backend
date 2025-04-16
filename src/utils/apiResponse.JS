@@ -1,4 +1,4 @@
-class apiREspinse {
+class apiResponse {
     constructor(statusCode, message = "success",data){
         this.statusCode = statusCode,
         this.data = data
