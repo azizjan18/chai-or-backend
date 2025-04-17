@@ -1,8 +1,10 @@
-class API_ERROR extends ERROR {
+import { Error } from "mongoose"
+
+class API_ERROR extends Error {
     constructor(statusCode, 
         message = "something went wrong",
         error = [],
-        statk =""
+        stack =""
     ){
         super(message)
         this.statusCode = statusCode
@@ -14,8 +16,8 @@ class API_ERROR extends ERROR {
 
 
 
-        if (statck) {
-            this.statck = statk
+        if (stack) {
+            this.stack = stack
         }
         else{
             error.captureStackTrace(this,this.constructor)
